@@ -171,3 +171,9 @@ from car c
 join engine e on c.engine_id = e.id
 join engine_type et on et.name=e.engine_type_name
 join body b on b.id=c.body_id;
+-- Вывод машин в том числе без двигателя с помощью left join
+select c.title as car, e.title as engine, et.description as engine_type,e.v as volume, e.hp as power, b.title as body
+from car c
+left join engine e on c.engine_id = e.id
+left join engine_type et on et.name=e.engine_type_name
+join body b on b.id=c.body_id;
