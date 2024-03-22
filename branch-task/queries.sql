@@ -21,3 +21,6 @@ select *
 from employee
 where manager_id IS NULL
 order by salary desc;
+
+select *
+from employee;
